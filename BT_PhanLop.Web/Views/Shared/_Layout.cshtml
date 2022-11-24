@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>@ViewData["Title"] - BT_PhanLop</title>
+	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+	<link rel="stylesheet" href="~/BT_PhanLop.styles.css" asp-append-version="true" />
+	<link rel="stylesheet" href="~/css/style.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+	<!-- Favicon -->
+	<link rel="shortcut icon" type="image/x-icon" href="~/assets/img/favicon.png">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="~/assets/css/bootstrap.min.css">
+
+	<!-- Fontawesome CSS -->
+	<link rel="stylesheet" href="~/assets/css/font-awesome.min.css">
+
+	<!-- Lineawesome CSS -->
+	<link rel="stylesheet" href="~/assets/css/line-awesome.min.css">
+
+	<!-- Chart CSS -->
+	<link rel="stylesheet" href="~/assets/plugins/morris/morris.css">
+
+	<!-- Main CSS -->
+	<link rel="stylesheet" href="~/assets/css/style.css">
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.min.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+	<!-- Main Wrapper -->
+	<div class="main-wrapper">
+		<!-- Header -->
+		<div class="header">
+
+			<!-- Header Title -->
+			<div class="page-title-box">
+				<h3>EMPLOYEE MANAGEMENT</h3>
+			</div>
+			<!-- /Header Title -->
+
+			<a id="mobile_btn" class="mobile_btn" href="index.html#sidebar"><i class="fa fa-bars"></i></a>
+
+			<!-- Header Menu -->
+			<ul class="nav user-menu">
+				<li class="nav-item dropdown has-arrow main-drop">
+					<a href="index.html#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+						<span class="user-img">
+							<img src="~/assets/img/profiles/avatar-21.jpg" alt="">
+							<span class="status online"></span>
+						</span>
+						<span>Admin</span>
+					</a>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="profile.html">My Profile</a>
+						<a class="dropdown-item" href="login.html">Logout</a>
+					</div>
+				</li>
+			</ul>
+			<!-- /Header Menu -->
+			<!-- Mobile Menu -->
+			<div class="dropdown mobile-user-menu">
+				<a href="index.html#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+				<div class="dropdown-menu dropdown-menu-right">
+					<a class="dropdown-item" href="profile.html">My Profile</a>
+					<a class="dropdown-item" href="login.html">Logout</a>
+				</div>
+			</div>
+			<!-- /Mobile Menu -->
+		</div>
+		<!-- /Header -->
+		<!-- Sidebar -->
+		<div class="sidebar" id="sidebar">
+			<div class="sidebar-inner slimscroll">
+				<div id="sidebar-menu" class="sidebar-menu">
+					<ul>
+						<li class="submenu">
+							<a asp-controller="Employee" asp-action="Index"><i class="la la-user"></i> <span> Employees</span> <span class="menu-arrow"></span> </a>
+							<ul style="display: none;">
+								<li><a asp-controller="Employee" asp-action="Index"> List Employees </a></li>
+								<li><a asp-controller="Employee" asp-action="Create"> Create Employee </a></li>
+							</ul>
+						</li>
+						<li class="submenu">
+							<a asp-controller="Payment" asp-action="Index"><i class="la la-money"></i> <span> Payroll </span> <span class="menu-arrow"></span> </a>
+							<ul style="display: none;">
+								<li><a a asp-controller="Payment" asp-action="Index"> Payment Records </a></li>
+								<li><a a asp-controller="Payment" asp-action="Create"> Create Payment Record </a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- /Sidebar -->
+		<!-- Page Wrapper -->
+		<div class="page-wrapper">
+
+			@RenderBody()
+
+		</div>
+		<!-- /Page Wrapper -->
+	</div>
+	<!-- /Main Wrapper -->
+
+
+	<script src="~/lib/jquery/dist/jquery.min.js"></script>
+	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="~/js/site.js" asp-append-version="true"></script>
+
+	<!-- jQuery -->
+	<script src="~/assets/js/jquery-3.2.1.min.js"></script>
+
+	<!-- Bootstrap Core JS -->
+	<script src="~/assets/js/popper.min.js"></script>
+	<script src="~/assets/js/bootstrap.min.js"></script>
+
+	<!-- Slimscroll JS -->
+	<script src="~/assets/js/jquery.slimscroll.min.js"></script>
+
+	<!-- Chart JS -->
+	<script src="~/assets/plugins/morris/morris.min.js"></script>
+	<script src="~/assets/plugins/raphael/raphael.min.js"></script>
+	<script src="~/assets/js/chart.js"></script>
+
+	<!-- Custom JS -->
+	<script src="~/assets/js/app.js"></script>
+	@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

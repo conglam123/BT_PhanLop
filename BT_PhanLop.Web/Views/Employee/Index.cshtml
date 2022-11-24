@@ -1,0 +1,75 @@
+﻿@using BT_PhanLop.Models
+
+@model IEnumerable<EmployeeIndexViewModel>
+
+@{
+	ViewBag.Title = "Employees";
+}
+
+<!-- Page Content -->
+<div class="content container-fluid">
+
+	<!-- Page Header -->
+	<div class="page-header">
+		<div class="row align-items-center">
+			<div class="col">
+				<h3 class="page-title">Employee</h3>
+				<ul class="breadcrumb">
+					<li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Dashboard</a></li>
+					<li class="breadcrumb-item active">Employee</li>
+				</ul>
+			</div>
+			<div class="col-auto float-right ml-auto">
+				<a asp-controller="Employee" asp-action="Create" class="btn add-btn"><i class="fa fa-plus"></i> Add Employee</a>
+			</div>
+		</div>
+	</div>
+	<!-- /Page Header -->
+
+	<div class="row">
+		<div class="col-md-12">
+			<div class="table-responsive">
+				<table class="table table-striped custom-table datatable">
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Employee NO</th>
+							<th>Email</th>
+							<th class="text-nowrap">Join Date</th>
+							<th class="text-nowrap">Date of Birth</th>
+							<th class="text-right no-sort">Action</th>
+						</tr>
+					</thead>
+					<tbody>
+						@foreach (var item in Model)
+						{
+							<tr>
+								<td>
+									<h2 class="table-avatar">
+										<a asp-controller="Employee" asp-action="Detail" asp-route-id="@item.Id" class="avatar"><img alt="" src="@Url.Content(item.ImageUrl)"></a>
+										<a asp-controller="Employee" asp-action="Detail" asp-route-id="@item.Id" >@item.FullName <span>@item.Designation</span></a>
+									</h2>
+								</td>
+								<td>@item.EmployeeNo</td>
+								<td>@item.Email</td>
+								<td>@item.DateJoined</td>
+								<td>@item.DoB</td>
+								<td class="text-right">
+									<div class="dropdown dropdown-action">
+										<a asp-controller="Employee" asp-action="Index" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+										<div class="dropdown-menu dropdown-menu-right">
+											<a class="dropdown-item" asp-controller="Employee" asp-action="Detail" asp-route-id="@item.Id"><i class="fas fa-bars m-r-5"></i>Detail</a>
+											<a class="dropdown-item" asp-controller="Employee" asp-action="Edit" asp-route-id="@item.Id"><i class="fa fa-pencil m-r-5"></i> Edit</a>
+											<a class="dropdown-item" asp-controller="Employee" asp-action="Delete" asp-route-id="@item.Id"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+										</div>
+									</div>
+								</td>
+							</tr>
+						}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /Page Content -->

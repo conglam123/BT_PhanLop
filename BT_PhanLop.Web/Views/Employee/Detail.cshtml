@@ -1,0 +1,57 @@
+﻿@using BT_PhanLop.Models
+
+@model EmployeeDetailsViewModel
+
+@{
+	ViewBag.Title = "Detail Employee";
+}
+
+<div class="content container-fluid">
+
+	<!-- Page Header -->
+	<div class="page-header">
+		<div class="row">
+			<div class="col">
+				<h3 class="page-title">Employee</h3>
+				<ul class="breadcrumb">
+					<li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Dashboard</a></li>
+					<li class="breadcrumb-item active">Detail Employee</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- /Page Header -->
+
+	<div class="col-md-12 grid-margin grid-margin-md-0">
+		<div class="card">
+			<div class="card-body">
+				<div class="wrap d-flex justify-content-start justify-content-sm-center flex-wrap">
+					<img class="rounded-circle shadow-lg" style="width:300px; height:350px" src="@Url.Content(Model.ImageUrl)" />
+					<div class="wrap align-items-center ml-5">
+						<p class="font-weight-bold text-success" style="font-size20px">@Model.FullName</p>
+						<p class="font-weight-bold text-success">Role: @Model.Designation</p>
+						<p class="font-weight-bold text-success">Gender: @Model.Gender</p>
+						<p class="font-weight-bold text-success">Date Of Birth: @Model.DoB.ToString("dd/MM/yyyy")</p>
+						<p class="font-weight-bold text-success">Employee Number: @Model.EmployeeNo</p>
+						<p class="font-weight-bold text-success">NI Number: @Model.NationalInsuranceNo</p>
+						<p class="font-weight-bold text-success">Email: @Model.Email</p>
+						<br /><br />
+						<p class="font-weight-bold">Pay & Deduction</p>
+						<hr style="background-color:crimson" />
+						<p class="font-weight-normal text-success">Payment Method: @Model.PaymentMethod</p>
+						<p class="font-weight-normal text-success">Student Loan: @Model.StudentLoan</p>
+						<p class="font-weight-normal text-success">Union Member: @Model.UnionMember</p>
+						<br /><br />
+						<p class="font-weight-bold">Address</p>
+						<hr style="background-color:crimson" />
+						<p class="font-weight-normal">@Model.Address</p>
+						<p class="font-weight-normal">@Model.City</p>
+						<p class="font-weight-normal">@Model.PostCode</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+</div>

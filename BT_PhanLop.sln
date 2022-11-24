@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32328.378
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BT_PhanLop.Entity", "BT_PhanLop.Entity\BT_PhanLop.Entity.csproj", "{8727DDA7-0E0A-46FF-BB35-8E3452C03E64}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BT_PhanLop.Persistence", "BT_PhanLop.Persistence\BT_PhanLop.Persistence.csproj", "{3F74216F-8ED3-4237-8EA8-C75BD4A1FBAD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BT_PhanLop.Services", "BT_PhanLop.Services\BT_PhanLop.Services.csproj", "{1A34750C-E87F-4381-AA25-ECE770C210FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BT_PhanLop", "BT_PhanLop.Web\BT_PhanLop.csproj", "{56F1F599-D52B-463C-8E51-76F25EADB8EE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8727DDA7-0E0A-46FF-BB35-8E3452C03E64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8727DDA7-0E0A-46FF-BB35-8E3452C03E64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8727DDA7-0E0A-46FF-BB35-8E3452C03E64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8727DDA7-0E0A-46FF-BB35-8E3452C03E64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F74216F-8ED3-4237-8EA8-C75BD4A1FBAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F74216F-8ED3-4237-8EA8-C75BD4A1FBAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F74216F-8ED3-4237-8EA8-C75BD4A1FBAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F74216F-8ED3-4237-8EA8-C75BD4A1FBAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A34750C-E87F-4381-AA25-ECE770C210FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A34750C-E87F-4381-AA25-ECE770C210FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A34750C-E87F-4381-AA25-ECE770C210FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A34750C-E87F-4381-AA25-ECE770C210FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56F1F599-D52B-463C-8E51-76F25EADB8EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56F1F599-D52B-463C-8E51-76F25EADB8EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56F1F599-D52B-463C-8E51-76F25EADB8EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56F1F599-D52B-463C-8E51-76F25EADB8EE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CBEBCCBE-EBC3-4E34-ADDF-2166A883EF8F}
+	EndGlobalSection
+EndGlobal
